@@ -9,7 +9,7 @@ namespace Rewind
         // Start is called before the first frame update
         void Start()
         {
-            TimeStream.Instance.OnTimeZero += TimeStream.Instance.Pause;
+            //TimeStream.Instance.OnTimeZero += TimeStream.Instance.Pause;
             TimeStream.Instance.Play();
         }
 

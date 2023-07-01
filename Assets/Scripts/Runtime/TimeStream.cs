@@ -30,12 +30,14 @@ namespace Rewind
         float backwardTimeScale;
         [SerializeField]
         float baseRewindTime;
-
+        [SerializeField]
+        float startTime;
 
         private List<ReverseBehaviour> reverseBehaviours = new List<ReverseBehaviour>();
         private float rewindedTime;
 
         public event Action OnTimeZero;
+        public event Action OnRevindDone;
 
         public void Pause()
         {
@@ -65,6 +67,13 @@ namespace Rewind
             reverseBehaviours.Remove(reverseBehaviour);
         }
 
+
+        private void Start()
+        {
+            StreamTime = startTime;            
+        }
+
+
         private void FixedUpdate()
         {
             if (!Playing)
@@ -88,11 +97,13 @@ namespace Rewind
                 if(rewindedTime >= baseRewindTime)
                 {
                     Forward = true;
+                    OnRevindDone?.Invoke();
                 }
                 if(fixedBackwardDeltaTime >= StreamTime)
                 {
                     Forward = true;
                     StreamTime = 0;
+                    OnRevindDone?.Invoke();
                     OnTimeZero?.Invoke();
                 }
                 else

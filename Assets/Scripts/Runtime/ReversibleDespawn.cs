@@ -13,6 +13,7 @@ namespace Rewind
         {
             despawnTime = TimeStream.StreamTime;
             despawned = true;
+            gameObject.SetActive(false);
         }
         public override void ForwardUpdate(TimeData timeData)
         {
