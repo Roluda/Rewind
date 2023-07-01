@@ -1,16 +1,31 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Rewind
 {
     public class ReversibleTransform : ReverseBehaviour
     {
+        [SerializeField]
+        ReverseTransformAsset _startAsset;
+
         private Stack<TimedTransform> _timeStack = new Stack<TimedTransform>();
 
         private void Awake()
         {
             TimeStream.Instance.Register(this);
+            if (_startAsset)
+            {
+                _timeStack = new Stack<TimedTransform>(_startAsset.timedTransform.Reverse());
+                if(_timeStack.TryPeek(out var peek))
+                {
+                    transform.localPosition = peek.Position;
+                    transform.localRotation = peek.Rotation;
+                    transform.localScale = peek.Scale;
+                }
+            }
         }
 
         public override void ReverseUpdate(TimeData timeData)
@@ -34,6 +49,12 @@ namespace Rewind
                 Scale = transform.localScale
             };
             _timeStack.Push(timedTransform);
+        }
+
+        [Button]
+        public void StoreToAsset(string name)
+        {
+            ReverseTransformAsset.StoreToAsset(_timeStack, name);
         }
 
         private void OnDestroy()

@@ -32,6 +32,8 @@ namespace Rewind
         float baseRewindTime;
         [SerializeField]
         float startTime;
+        [SerializeField]
+        float forceDebugPauseTime = 0;
 
         private List<ReverseBehaviour> reverseBehaviours = new List<ReverseBehaviour>();
         private float rewindedTime;
@@ -88,6 +90,13 @@ namespace Rewind
                 {
                     reverseBehaviour.ForwardUpdate(timeData);
                 }
+
+#if UNITY_EDITOR
+                if (forceDebugPauseTime > 0 && StreamTime >= forceDebugPauseTime)
+                {
+                    Debug.Break();
+                }
+#endif
             }
 
             if (!Forward)
