@@ -18,8 +18,8 @@ namespace Rewind
             while(_timeStack.TryPeek(out var timedTransform) && timedTransform.StreamTime >= timeData.StreamTime)
             {
                 var pop = _timeStack.Pop();
-                transform.position = pop.Position;
-                transform.rotation = pop.Rotation;
+                transform.localPosition = pop.Position;
+                transform.localRotation = pop.Rotation;
                 transform.localScale = pop.Scale;
             }
         }
@@ -29,8 +29,8 @@ namespace Rewind
             var timedTransform = new TimedTransform
             {
                 StreamTime = timeData.StreamTime,
-                Position = transform.position,
-                Rotation = transform.rotation,
+                Position = transform.localPosition,
+                Rotation = transform.localRotation,
                 Scale = transform.localScale
             };
             _timeStack.Push(timedTransform);
@@ -38,7 +38,10 @@ namespace Rewind
 
         private void OnDestroy()
         {
-            TimeStream.Instance.Unregister(this);
+            if (TimeStream.Instance)
+            {
+                TimeStream.Instance.Unregister(this);
+            }
         }
     }
 }

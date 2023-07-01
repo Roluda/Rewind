@@ -10,7 +10,7 @@ namespace Rewind
         void Start()
         {
             TimeStream.Instance.OnTimeZero += TimeStream.Instance.Pause;
-        
+            TimeStream.Instance.Play();
         }
 
         // Update is called once per frame
