@@ -130,6 +130,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diagonalLight: {fileID: 8273155826289689167}
   skyboxMaterial: {fileID: 2100000, guid: c3c2f992685f55f459a0b2beeb9f164d, type: 2}
-  nightTime: 240
+  nightTime: 600
   minRotation: 0
   maxRotation: 270

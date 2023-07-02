@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e5f12fdc4c3c84b8362b35d17970af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startAsset: {fileID: 0}
+  _startAsset: {fileID: 11400000, guid: a546206fa06c44c49ba325b5460dac9b, type: 2}
 --- !u!1 &5393215578589016642
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e5f12fdc4c3c84b8362b35d17970af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startAsset: {fileID: 0}
+  _startAsset: {fileID: 11400000, guid: 8b307e7557385054597404efa6889303, type: 2}
 --- !u!208 &1880717756858765377
 NavMeshObstacle:
   m_ObjectHideFlags: 0

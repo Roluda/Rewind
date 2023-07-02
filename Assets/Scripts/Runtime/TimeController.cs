@@ -24,6 +24,8 @@ namespace Rewind
         [Header("Debug")]
         [SerializeField]
         float forceDebugPauseTime = 0;
+        [SerializeField]
+        float currentStreamTime = 0;
 
         [Header("Time Settings")]
         [SerializeField]
@@ -80,6 +82,7 @@ namespace Rewind
         private void Start()
         {
             GainTimeFromCollect(initialTimeGain);
+            TimeStream.Instance.SetTime(startingPointInTime);
             TimeStream.Instance.OnRevindDone += Forward;
             TimeStream.Instance.OnTimeZero += EnableChoice;
             if (startingPointInTime <= 0)
@@ -138,6 +141,8 @@ namespace Rewind
                 }
 #endif
             }
+
+            currentStreamTime = TimeStream.StreamTime;
             hourglass.SetTarget(currentTime / maximumTime);
         }
 

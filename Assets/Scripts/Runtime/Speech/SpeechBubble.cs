@@ -80,6 +80,8 @@ namespace Rewind
 
         public void Show(string text)
         {
+            currentText = "";
+            this.text.text = currentText;
             targetText = text;
         }
     }
