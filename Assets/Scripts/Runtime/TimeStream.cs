@@ -22,6 +22,8 @@ namespace Rewind
         public static bool Forward { get; private set; }
         public static float StreamTime { get; private set; }
 
+        public float ForwardScale => forwardTimeScale;
+        public float BackwardScale => backwardTimeScale;
 
 
         [SerializeField]

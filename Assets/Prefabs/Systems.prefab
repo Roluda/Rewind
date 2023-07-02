@@ -84,6 +84,9 @@ MonoBehaviour:
   choicePanel: {fileID: 0}
   yesButton: {fileID: 0}
   runButton: {fileID: 0}
+  timeGainAudioClip: {fileID: 8300000, guid: 7704c46ac8f304863af4d829e34b543c, type: 3}
+  timeEmptyGong: {fileID: 8300000, guid: d688ec4d537764d0482835672f153c41, type: 3}
+  pauseTime: 1
 --- !u!114 &8490797161214289146
 MonoBehaviour:
   m_ObjectHideFlags: 0

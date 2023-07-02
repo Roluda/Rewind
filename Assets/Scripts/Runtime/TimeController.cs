@@ -49,8 +49,17 @@ namespace Rewind
         [SerializeField]
         Button runButton;
 
+        [Header("Feel")]
+        [SerializeField]
+        AudioClip timeGainAudioClip;
+        [SerializeField]
+        AudioClip timeEmptyGong;
+        [SerializeField]
+        float pauseTime = 1;
 
         float currentTime;
+        float pauseTimer;
+        bool triggerRewind;
 
         private void Awake()
         {
@@ -118,6 +127,7 @@ namespace Rewind
         public void GainTime(float seconds)
         {
             currentTime += seconds;
+            AudioSource.PlayClipAtPoint(timeGainAudioClip, Camera.main.transform.position, 2);
         }
 
         public void LoseTime(float seconds)
