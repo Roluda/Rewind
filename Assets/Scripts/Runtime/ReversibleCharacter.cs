@@ -1,3 +1,4 @@
+using Cinemachine;
 using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,8 +14,9 @@ namespace Rewind
         [SerializeField]
         FirstPersonController firstPersonController;
 
-
         bool CanUpdate => TimeStream.Forward && TimeStream.Playing;
+
+
 
         // Update is called once per frame
         void Update()

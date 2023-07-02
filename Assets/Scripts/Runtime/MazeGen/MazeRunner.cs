@@ -35,8 +35,8 @@ namespace Rewind
                         var offset = new Vector3(-maxX / 2, 0, -maxY / 2) * spacing;
                         var pos = offset + new Vector3(x, 0, y) * spacing;
                         var spawn = PrefabUtility.InstantiatePrefab(bestRule.Prefab) as GameObject;
-                        spawn.transform.position = pos;
-                        spawn.transform.SetParent(context, true);
+                        spawn.transform.SetParent(context);
+                        spawn.transform.localPosition = pos;
                     }
                 }
             }

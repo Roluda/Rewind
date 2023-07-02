@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e5f12fdc4c3c84b8362b35d17970af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startAsset: {fileID: 0}
 --- !u!1 &5393215578589016642
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +161,7 @@ GameObject:
   - component: {fileID: 4610667772211726377}
   - component: {fileID: 1880717756858765377}
   m_Layer: 8
-  m_Name: PlayerCharacter
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -196,8 +197,8 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.25
+  m_SlopeLimit: 60
+  m_StepOffset: 0.5
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.93, z: 0}
@@ -213,9 +214,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 4
-  SprintSpeed: 6
-  RotationSpeed: 1
+  MoveSpeed: 6
+  SprintSpeed: 8
+  RotationSpeed: 2
   SpeedChangeRate: 10
   JumpHeight: 1.2
   Gravity: -15
@@ -391,6 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e5f12fdc4c3c84b8362b35d17970af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startAsset: {fileID: 0}
 --- !u!208 &1880717756858765377
 NavMeshObstacle:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4866023255049828}
   - component: {fileID: 33261227942192310}
   - component: {fileID: 23684741281977316}
-  - component: {fileID: 95188678608529312}
+  - component: {fileID: 760605397479575284}
   m_Layer: 0
   m_Name: mobile_altar
   m_TagString: Untagged
@@ -84,24 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &95188678608529312
-Animator:
-  serializedVersion: 5
+--- !u!64 &760605397479575284
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002741326116710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 483f3dc5e10b140fdb1a7115c0c12801, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 483f3dc5e10b140fdb1a7115c0c12801, type: 3}
