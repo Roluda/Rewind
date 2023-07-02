@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24757933b3dc2a54c907d5164c80f0e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diagonalLight: {fileID: 0}
+  diagonalLight: {fileID: 8273155826289689167}
   skyboxMaterial: {fileID: 2100000, guid: c3c2f992685f55f459a0b2beeb9f164d, type: 2}
   nightTime: 240
   minRotation: 0

@@ -12,9 +12,12 @@ namespace Rewind
         [SerializeField]
         float letterAddInterval;
 
+        [Header("Pretime Values")]
+        [SerializeField]
         string targetText = "";
+        [SerializeField]
         string currentText = "";
-
+        [SerializeField]
         float timeOfTextEnd;
 
         float timer;

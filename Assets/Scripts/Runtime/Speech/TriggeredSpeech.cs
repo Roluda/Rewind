@@ -13,8 +13,10 @@ namespace Rewind
         SpeechBubble speechBubble;
         [SerializeField]
         LayerMask playerLayer;
-
+        [Header("Pretime Values")]
+        [SerializeField]
         float triggerTime;
+        [SerializeField]
         bool triggered;
 
         public override void ForwardUpdate(TimeData timeData)
@@ -49,10 +51,8 @@ namespace Rewind
             {
                 var playerDirection = other.bounds.center - transform.position;
                 Physics.Raycast(transform.position, playerDirection, out var hit, Mathf.Infinity, playerLayer, QueryTriggerInteraction.Ignore);
-                Debug.DrawRay(transform.position, playerDirection * 3);
                 if (hit.collider.transform.root != other.transform.root)
                 {
-                    Debug.Log("PlayerOccluded");
                     return;
                 }
 
