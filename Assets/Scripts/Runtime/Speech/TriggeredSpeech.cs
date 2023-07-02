@@ -13,8 +13,10 @@ namespace Rewind
         SpeechBubble speechBubble;
         [SerializeField]
         LayerMask playerLayer;
-
+        [Header("Pretime Values")]
+        [SerializeField]
         float triggerTime;
+        [SerializeField]
         bool triggered;
 
         public override void ForwardUpdate(TimeData timeData)

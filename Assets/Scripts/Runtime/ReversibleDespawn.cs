@@ -6,7 +6,10 @@ namespace Rewind
 {
     public class ReversibleDespawn : ReverseBehaviour
     {
+        [Header("Pretime Values")]
+        [SerializeField]
         float despawnTime;
+        [SerializeField]
         bool despawned;
 
         public void Despawn()
@@ -31,6 +34,10 @@ namespace Rewind
         private void Start()
         {
             TimeStream.Instance.Register(this);
+            if (despawned)
+            {
+                gameObject.SetActive(false);
+            }
         }
 
         private void OnDestroy()
