@@ -42,6 +42,7 @@ namespace Rewind
                         var pos = new Vector2((float)x / texture.width, (float)y / texture.height);
                         int mazeX = Mathf.Clamp(Mathf.RoundToInt(pos.x * width), 0, width-1);
                         int mazeY = Mathf.Clamp(Mathf.RoundToInt(pos.y * height), 0, height-1);
+                        mazeY = height - 1 - mazeY;
                         Maze[mazeX, mazeY] = true;
                     }
                 }
