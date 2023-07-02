@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10934a800512241429ab8860de859e6b, type: 3}
   m_Name: Speech 6
   m_EditorClassIdentifier: 
-  text: you have some time
-  audio: {fileID: 0}
-  volume: 0
+  text: "You can run, but you cannot hide\u2026"
+  audio: {fileID: 8300000, guid: 72a2dada453084458bb4bd73b0b14d57, type: 3}
+  volume: 1

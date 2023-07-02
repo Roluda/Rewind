@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10934a800512241429ab8860de859e6b, type: 3}
   m_Name: Speech 4
   m_EditorClassIdentifier: 
-  text: you think you can escape?
-  audio: {fileID: 0}
-  volume: 0
+  text: "I will feast on your blood\u2026"
+  audio: {fileID: 8300000, guid: da9cfea63c56e4661900d57fbf6960ff, type: 3}
+  volume: 1

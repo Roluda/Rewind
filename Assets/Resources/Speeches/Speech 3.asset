@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10934a800512241429ab8860de859e6b, type: 3}
   m_Name: Speech 3
   m_EditorClassIdentifier: 
-  text: I want blood
-  audio: {fileID: 0}
-  volume: 0
+  text: "You think you can escape me? \n[Laughs] Very well. There\u2019s only one
+    way out - your time is running out\u2026"
+  audio: {fileID: 8300000, guid: a55cb0d3e4ce94d0da4491d52b60c118, type: 3}
+  volume: 1
