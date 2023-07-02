@@ -17,7 +17,7 @@ namespace Rewind
         {
             if (other.CompareTag(playerTag))
             {
-                TimeController.Instance.GainTime(timeGain);
+                TimeController.Instance.GainTimeFromCollect(timeGain);
                 despawn.Despawn();
             }
         }
