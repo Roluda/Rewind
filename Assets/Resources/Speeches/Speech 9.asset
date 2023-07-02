@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10934a800512241429ab8860de859e6b, type: 3}
-  m_Name: Speech 5
+  m_Name: Speech 9
   m_EditorClassIdentifier: 
-  text: Time is an illusion...
-  audio: {fileID: 8300000, guid: 6d01bfcaefb474fc08a3034dc37e060b, type: 3}
+  text: "You are on borrowed time\u2026"
+  audio: {fileID: 8300000, guid: 236ac81b8b9b941c0bb95e1f570d0900, type: 3}
   volume: 1

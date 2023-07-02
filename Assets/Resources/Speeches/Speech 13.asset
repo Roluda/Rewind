@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10934a800512241429ab8860de859e6b, type: 3}
-  m_Name: Speech 5
+  m_Name: Speech 13
   m_EditorClassIdentifier: 
-  text: Time is an illusion...
-  audio: {fileID: 8300000, guid: 6d01bfcaefb474fc08a3034dc37e060b, type: 3}
+  text: "There\u2019s only one way you will leave this temple\u2026 Paying with your
+    blood."
+  audio: {fileID: 8300000, guid: 2295d32c8c6bb4468995e9e5adb65778, type: 3}
   volume: 1

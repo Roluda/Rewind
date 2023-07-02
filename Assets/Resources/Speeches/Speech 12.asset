@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10934a800512241429ab8860de859e6b, type: 3}
-  m_Name: Speech 5
+  m_Name: Speech 12
   m_EditorClassIdentifier: 
-  text: Time is an illusion...
-  audio: {fileID: 8300000, guid: 6d01bfcaefb474fc08a3034dc37e060b, type: 3}
+  text: Come to me! Come to me now!
+  audio: {fileID: 8300000, guid: e702ece42cfb1468ab47d2e7d8bccd2c, type: 3}
   volume: 1
