@@ -73,6 +73,7 @@ namespace Rewind
         {
             TimeStream.Instance.Pause();
             choicePanel.gameObject.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
         }
 
         private void Sacrifice()
@@ -84,6 +85,7 @@ namespace Rewind
         {
             choicePanel.gameObject.SetActive(false);
             TimeStream.Instance.Play();
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         private void Update()
