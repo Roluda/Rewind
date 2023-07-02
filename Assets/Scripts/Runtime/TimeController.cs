@@ -38,6 +38,8 @@ namespace Rewind
         float startingPointInTime;
         [SerializeField]
         float initialTimeGain;
+        [SerializeField]
+        float consecutiveMultiplier = 2;
 
         [Header("UI")]
         [SerializeField]
@@ -48,24 +50,45 @@ namespace Rewind
         Button yesButton;
         [SerializeField]
         Button runButton;
+        [SerializeField]
+        GameObject startPanel;
+        [SerializeField]
+        Button startButton;
 
+        [Header("Feel")]
+        [SerializeField]
+        AudioClip timeGainAudioClip;
+        [SerializeField]
+        AudioClip timeEmptyGong;
+        [SerializeField]
+        float pauseTime = 1;
 
         float currentTime;
+        float pauseTimer;
+        bool triggerRewind;
+
+        int maxMulti = 1;
+        int currentMulti = 1;
 
         private void Awake()
         {
             yesButton.onClick.AddListener(Sacrifice);
             runButton.onClick.AddListener(Run);
+            startButton.onClick.AddListener(Run);
         }
 
         private void Start()
         {
-            GainTime(initialTimeGain);
+            GainTimeFromCollect(initialTimeGain);
             TimeStream.Instance.OnRevindDone += Forward;
             TimeStream.Instance.OnTimeZero += EnableChoice;
             if (startingPointInTime <= 0)
             {
                 EnableChoice();
+            }
+            else
+            {
+                EnableStartDialogue();
             }
         }
 
@@ -73,6 +96,13 @@ namespace Rewind
         {
             TimeStream.Instance.Pause();
             choicePanel.gameObject.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+        }
+
+        void EnableStartDialogue()
+        {
+            TimeStream.Instance.Pause();
+            startPanel.gameObject.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
         }
 
@@ -84,6 +114,7 @@ namespace Rewind
         private void Run()
         {
             choicePanel.gameObject.SetActive(false);
+            startPanel.gameObject.SetActive(false);
             TimeStream.Instance.Play();
             Cursor.lockState = CursorLockMode.Locked;
         }
@@ -96,7 +127,7 @@ namespace Rewind
                 currentTime = Mathf.Clamp(currentTime, 0, maximumTime);
                 if (currentTime == 0)
                 {
-                    TimeStream.Instance.Rewind(rewindedTime);
+                    TimeStream.Instance.Rewind(rewindedTime * currentMulti);
                 }
 
 
@@ -112,20 +143,31 @@ namespace Rewind
 
         void Forward()
         {
+            currentMulti++;
+            if (currentMulti > maxMulti)
+            {
+                currentMulti = maxMulti;
+            }
             GainTime(timeGained);
         }
 
         public void GainTime(float seconds)
         {
             currentTime += seconds;
+            AudioSource.PlayClipAtPoint(timeGainAudioClip, Camera.main.transform.position, 2);
+        }
+
+        public void GainTimeFromCollect(float seconds)
+        {
+            currentMulti = 1;
+            maxMulti++;
+            currentTime += seconds;
+            AudioSource.PlayClipAtPoint(timeGainAudioClip, Camera.main.transform.position, 2);
         }
 
         public void LoseTime(float seconds)
         {
             currentTime -= seconds;
         }
-
-
-
     }
 }
