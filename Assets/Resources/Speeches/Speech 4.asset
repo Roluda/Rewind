@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "I will feast on your blood\u2026"
   audio: {fileID: 8300000, guid: da9cfea63c56e4661900d57fbf6960ff, type: 3}
-  volume: 1
+  volume: 2

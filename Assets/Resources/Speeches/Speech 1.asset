@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "Your blood, I can almost taste it\u2026 Finally, you will be free."
   audio: {fileID: 8300000, guid: 309d4cdf9f3004eaaa6c90a61f0e26fa, type: 3}
-  volume: 1
+  volume: 2

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "The sacrifice must be completed\u2026"
   audio: {fileID: 8300000, guid: 3130a76344ab24d57b9636e01c3c0ab6, type: 3}
-  volume: 1
+  volume: 2

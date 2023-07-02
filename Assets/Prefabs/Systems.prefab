@@ -74,16 +74,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceDebugPauseTime: 0
+  currentStreamTime: 0
   maximumTime: 30
   defaultDrainRate: 1
   timeGained: 0
   rewindedTime: 0
   startingPointInTime: 0
   initialTimeGain: 0
+  consecutiveMultiplier: 2
   hourglass: {fileID: 0}
   choicePanel: {fileID: 0}
   yesButton: {fileID: 0}
   runButton: {fileID: 0}
+  startPanel: {fileID: 0}
+  startButton: {fileID: 0}
   timeGainAudioClip: {fileID: 8300000, guid: 7704c46ac8f304863af4d829e34b543c, type: 3}
   timeEmptyGong: {fileID: 8300000, guid: d688ec4d537764d0482835672f153c41, type: 3}
   pauseTime: 1
@@ -99,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9e95a0a9d48ed45b9f0827b8105cc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSpeech: 0
+  firstSpeech: 2
   speeches:
   - {fileID: 11400000, guid: 5dc85ead23af6b84daaa7c537d4d3580, type: 2}
   - {fileID: 11400000, guid: 3becac9c262a5c940ac3ad95c602737f, type: 2}
@@ -107,3 +111,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2621a2a3f0adcca44bf08418bda2f2fc, type: 2}
   - {fileID: 11400000, guid: 9fca1fe189ef8d9468a237f79c27f8ec, type: 2}
   - {fileID: 11400000, guid: 68cb8a13b0497b144b013b012d33e444, type: 2}
+  - {fileID: 11400000, guid: 703e4f808268c442da2ca9975eda6b22, type: 2}
+  - {fileID: 11400000, guid: e33b2ccd61efd442c932e90f512d2b90, type: 2}
+  - {fileID: 11400000, guid: 0c182b9024e7045b4a805fbad9fc5087, type: 2}
+  - {fileID: 11400000, guid: f93b980aff9b34492986fa5e79a9911d, type: 2}
+  - {fileID: 11400000, guid: f089f4a57b7cd47f9876649416b9d8b0, type: 2}
+  - {fileID: 11400000, guid: 98ee0dac2be8e4bd789eec89b1d17939, type: 2}
+  - {fileID: 11400000, guid: 67c764bd6f85144169ebeb7f5e44eb5f, type: 2}
+  - {fileID: 11400000, guid: bb8058e1b651d49edba86eb77730576c, type: 2}

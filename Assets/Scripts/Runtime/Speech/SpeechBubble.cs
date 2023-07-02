@@ -19,8 +19,11 @@ namespace Rewind
         string currentText = "";
         [SerializeField]
         float timeOfTextEnd;
+        [SerializeField]
+        float maxDisplayDuration = 3f;
 
         float timer;
+        float idleTimer;
 
         private void Awake()
         {
@@ -43,6 +46,7 @@ namespace Rewind
                 timer += timeData.DeltaTime;
                 if(timer >= letterAddInterval)
                 {
+                    idleTimer = 0;
                     timer = 0;
                     currentText += targetText[0];
                     targetText = targetText.Remove(0, 1);
@@ -66,6 +70,7 @@ namespace Rewind
                 timer += timeData.DeltaTime;
                 if(timer >= letterAddInterval)
                 {
+                    idleTimer = 0;
                     timer = 0;
                     currentText = currentText.Remove(currentText.Length - 1, 1);
                     text.text = currentText;
@@ -76,6 +81,12 @@ namespace Rewind
         private void Update()
         {
             transform.LookAt(Camera.main.transform);
+            idleTimer += Time.deltaTime;
+            if(idleTimer > maxDisplayDuration)
+            {
+                currentText = "";
+                text.text = "";
+            }
         }
 
         public void Show(string text)

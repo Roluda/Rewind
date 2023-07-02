@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "[Laughter] I told you - there\u2019s only one way out\u2026"
   audio: {fileID: 8300000, guid: f96bc35564e6247c2ae699e7e88dad39, type: 3}
-  volume: 1
+  volume: 2

@@ -15,4 +15,4 @@ MonoBehaviour:
   text: "There\u2019s only one way you will leave this temple\u2026 Paying with your
     blood."
   audio: {fileID: 8300000, guid: 2295d32c8c6bb4468995e9e5adb65778, type: 3}
-  volume: 1
+  volume: 2

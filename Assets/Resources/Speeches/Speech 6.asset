@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "You can run, but you cannot hide\u2026"
   audio: {fileID: 8300000, guid: 72a2dada453084458bb4bd73b0b14d57, type: 3}
-  volume: 1
+  volume: 2

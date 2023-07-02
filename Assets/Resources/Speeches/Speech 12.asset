@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Come to me! Come to me now!
   audio: {fileID: 8300000, guid: e702ece42cfb1468ab47d2e7d8bccd2c, type: 3}
-  volume: 1
+  volume: 2
