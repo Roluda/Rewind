@@ -131,6 +131,7 @@ namespace Rewind
                 if (currentTime == 0)
                 {
                     TimeStream.Instance.Rewind(rewindedTime * currentMulti);
+                    AudioSource.PlayClipAtPoint(timeEmptyGong, Camera.main.transform.position, 2);
                 }
 
 
