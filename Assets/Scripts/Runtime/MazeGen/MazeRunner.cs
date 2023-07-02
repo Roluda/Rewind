@@ -18,6 +18,8 @@ namespace Rewind
         [SerializeField]
         Transform context;
 
+#if UNITY_EDITOR
+
         [Button]
         public void Generate()
         {
@@ -41,6 +43,8 @@ namespace Rewind
                 }
             }
         }
+
+#endif
 
         [Button]
         public void Clear()
